@@ -16,9 +16,7 @@ it can produce offspring with slight variation in fitness
 class Organism {
 public:
     double behavior;
-    Organism(double in_behavior) {
-        behavior = in_behavior;
-    }
+    Organism(double in_behavior): behavior(in_behavior) {}
     Organism * reproduce(emp::Random random) {
         Organism * child = (Organism *) malloc(sizeof(Organism));
         *child = Organism(behavior);
